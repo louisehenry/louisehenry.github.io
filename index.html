@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <title>Louise Henry - London based digital and web designer</title>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge;">
+    <meta name="description" content="Website of Louise Henry - a London based digital and web designer">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link type="text/css" media="screen" rel="stylesheet" href="css/style.css">
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript">
+      var els = ['section','article','header','footer','nav','aside'];
+      for (var i=0; i<els.length; i++) {
+        document.createElement(els[i]);
+      }
+    <![endif]-->
+  </head>
+
+  <body onload="app.init();">
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/" title="Home">Home</a><div class="active-state"></div></li>
+          <li><a href="/about" title="About">About</a><div class="active-state"></div></li>
+          <li><a href="/experience" title="Experience">Experience</a><div class="active-state"></div></li>
+          <li><a href="/portfolio" title="Portfolio">Portfolio</a><div class="active-state"></div></li>
+          <li><a href="/contact" title="Contact">Contact</a><div class="active-state"></div></li>
+        </ul>
+      </nav>
+    </header>    
+
+    <section id="page-wrapper">
+      <article id="home" class="page odd">
+        <div class="page-content">
+          <h1>Louise Henry</h1>
+          <h2>London based digital and web designer</h2>
+        </div>
+      </article>
+
+      <article id="about" class="page even">
+        <div class="page-content">
+          <h1>About</h1>
+          <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend pharetra velit id faucibus. Phasellus a nisi id ipsum lobortis porta ac in diam. Duis ac neque ut purus venenatis molestie vitae in justo. Sed aliquam nec ante id adipiscing. Suspendisse sed velit volutpat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend pharetra velit id faucibus. Phasellus a nisi id ipsum lobortis porta ac in diam. Duis ac neque ut purus venenatis molestie vitae in justo. Sed aliquam nec ante id adipiscing. Suspendisse sed velit volutpat, tristique tellus a, imperdiet lacus.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend pharetra velit id faucibus. Phasellus a nisi id ipsum lobortis porta ac in diam. Duis ac neque ut purus venenatis molestie vitae in justo. Sed aliquam nec ante id adipiscing. Suspendisse sed velit volutpat, tristique tellus a, imperdiet lacus.</p>          
+        </div>
+      </article>    
+
+      <article id="experience" class="page odd">
+        <div class="page-content">
+          <h1>Experience</h1>
+          <h2>Previous Employment</h2>
+          <p><strong>Lorem ipsum dolor sit amet - </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p><strong>Lorem ipsum dolor sit amet - </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h2>Qualifications</h2>
+          <p><strong>Lorem ipsum dolor sit amet - </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p><strong>Lorem ipsum dolor sit amet - </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h2>Skills &amp; Interests</h2>
+          <p><strong>Lorem ipsum dolor sit amet - </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p><strong>Lorem ipsum dolor sit amet - </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>          
+
+          <div class="buttons">
+            <a href="#" class="button button--cv" title="Download CV">Download CV</a>
+            <a href="#" class="button button--linkedin" title="LinkedIn Profile">LinkedIn Profile</a>
+        </div>
+      </article>
+
+      <article id="portfolio" class="page even">
+        <div class="page-content">
+          <h1>Portfolio</h1>
+          <div class="project-list">
+            <div class="project project--first project--rowfirst">
+
+            </div><!-- .project -->
+            <div class="project">
+
+            </div><!-- .project -->
+            <div class="project project--rowlast">
+
+            </div><!-- .project -->
+
+            <div class="project project--rowfirst">
+
+            </div><!-- .project -->
+            <div class="project">
+
+            </div><!-- .project -->
+            <div class="project project--rowlast">
+
+            </div><!-- .project -->
+          </div><!-- .project-list -->
+        </div>
+      </article>    
+
+      <article id="contact" class="page odd">
+        <div class="page-content">
+          <h1>Contact</h1>
+          <form method="post" action="https://docs.google.com/forms/d/1KAFCAofRFUKJrtaTqLr9iOEBhRHsJdpyhyh68mrZjCs/formResponse" target="form-target">
+            <div>
+              <input id="field-name" type="text" name="entry.1996118555" placeholder="Your Name" />
+              <input id="field-email" type="email" name="entry.1592606616" placeholder="Email Address" />
+              <textarea id="field-message" name="entry.1808670311" placeholder="Your Message Here"></textarea>
+            </div>
+            <p><input type="submit" class="button button--submit" id="form-send" value="Send Message" /></p>
+          </form>
+          <iframe id="form-target" name="form-target"></iframe>
+        </div>
+      </article>      
+    </section>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

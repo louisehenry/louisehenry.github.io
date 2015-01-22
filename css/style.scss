@@ -1,0 +1,221 @@
+@import 'fonts/langdon-webfont.css';
+
+$header_background: rgba(46,42,44,0.95);
+$odd_bg: #edeceb;
+$even_bg: #dddbda;
+$text_color: #3c373a;
+$active_menu_bg: #353132;
+
+
+section,article,header,footer,nav,aside { display: block; }
+
+*,html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  color: $text_color;
+}
+
+.page {
+  color: $text_color;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  .page-content {
+    margin: auto;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: table;
+    width: 60%;
+    height: auto;
+    font-size: 16px;
+    h1 {
+      font-family: 'Langdon';
+      font-weight: normal;
+      font-size: 72px;
+      text-transform: lowercase;
+    }
+    h2 {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+    p {
+      line-height: 30px;
+      margin-bottom: 1em;
+    }
+    p.intro {
+      font-weight: 600;
+    }
+  }
+}
+
+#home {
+  background: url(../images/london.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  .page-content {
+    background: url(../images/title-bg.png) no-repeat center center;
+    min-height: 160px;
+    padding: 100px 0;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  width: 100%;
+  height: 80px;
+  background: $header_background;
+  nav ul {
+    list-style: none;
+    text-align: center;
+    li {
+      display: inline-block;
+      position: relative;
+      a {
+        display: inline-block;
+        height: 80px;
+        line-height: 80px;        
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Langdon';
+        font-weight: normal;
+        font-size: 18px;
+        padding: 0 23px;
+      }
+    }
+    li.active {
+      background: $active_menu_bg;
+    }
+  }
+}
+.odd {
+  background: $odd_bg;
+}
+
+.even {
+  background: $even_bg;
+}
+
+.project-list {
+  margin: 0 -15px;
+}
+
+.project {
+  width: calc(33.333333% - 30px);
+  height: 150px;
+  background: black;
+  float: left;
+  position: relative;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  margin: 15px;
+  position: relative;
+  top: 0;
+  left: 2500px;
+}
+
+.project:nth-child(1) {
+  -moz-transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+
+.project:nth-child(2) {
+  -moz-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+
+.project:nth-child(3) {
+  -moz-transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; }
+
+.project:nth-child(4) {
+  -moz-transition-delay: 0.4s;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s; }
+
+.project:nth-child(5) {
+  -moz-transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s; }
+
+.project:nth-child(6) {
+  -moz-transition-delay: 0.6s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s; }
+
+#portfolio.visited .project {
+  left: 0;
+}
+
+#contact  {
+  input[type=text], input[type=email], textarea {
+    display: block;
+    width: 100%;
+    border: 0;
+    margin-bottom: 2px;
+    font-size: 16px;
+    color: #3c373a;
+  }
+  input[type=text], input[type=email] {
+    line-height: 60px;
+    height: 60px;
+    padding: 0 30px;
+  }
+  textarea {
+    padding: 30px;
+    height: 140px;
+    margin-bottom: 15px;
+  }
+}  
+
+.button {
+  border: 3px solid #3c373a;
+  display: inline-block;
+  margin: 0 15px;
+  height: 66px;
+  line-height: 60px;
+  padding: 0 50px;
+  text-transform: uppercase;
+  color: #3c373a;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  font-size: 1em;
+}
+
+.button:hover {
+  background: #3c373a;
+  color: white;
+}
+
+#form-target {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
