@@ -1,4 +1,4 @@
-@import url(fonts/langdon-webfont.css);
+@import url(/css/fonts/langdon-webfont.css);
 section, article, header, footer, nav, aside {
   display: block; }
 
