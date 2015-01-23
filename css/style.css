@@ -35,7 +35,7 @@ body {
     height: auto;
     font-size: 16px; }
     .page .page-content h1 {
-      font-family: 'Langdon';
+      font-family: 'langdonregular';
       font-weight: normal;
       font-size: 72px;
       text-transform: lowercase; }
@@ -83,7 +83,7 @@ header {
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        font-family: 'Langdon';
+        font-family: 'langdonregular';
         font-weight: normal;
         font-size: 18px;
         padding: 0 23px; }
