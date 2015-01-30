@@ -11,12 +11,31 @@ var chApp = function(options) {
   this.init = function() {
     var self = this;
 
+    // Give up if screen size too small
+    if (window.innerWidth <= 991) {
+      self.resize();
+      return;
+    }
+
     // Bind some events
-    window.onscroll = function() { self.scroll(); }
-    window.onresize = function() { self.resize(); }
+    window.addEventListener('scroll', function() { self.scroll(); });
+    window.addEventListener('resize', function() { self.resize(); });
+    window.addEventListener('popstate', function(e) { e.preventDefault(); self.popstate(e); });
 
     for (var i=0; i<self.navItems.length; i++) {
-      self.navItems[i].getElementsByTagName('a')[0].onclick = function(e) { e.preventDefault(); self.navClick(this); };
+      self.navItems[i].getElementsByTagName('a')[0].addEventListener('click', function(e) {
+        e.preventDefault(); 
+
+        var index;
+        for (var j=0; j<self.navItems.length; j++) {
+          if (self.navItems[j] == e.target.parentNode) {
+            index = j;
+            break;
+          }
+        }
+
+        self.navClick(index, true); 
+      });
     }
 
     self.resize();
@@ -38,22 +57,31 @@ var chApp = function(options) {
 
 
   // Clicking on a nav item
-  this.navClick = function(element) {
+  this.navClick = function(index, alterHistory) {
     var self = this,
-        pageId = element.getAttribute('href').replace(/^\//, ''),
-        listItem = element.parentNode;
-
-    if (pageId == '') 
-      pageId = 'home';
+        lnk = self.navItems[index].getElementsByTagName('a')[0],
+        pageId = lnk.getAttribute('href').replace(/^\#/, ''),
+        listItem = lnk.parentNode;
 
     for (var j=0; j<self.pages.length; j++)
     {
       if (self.pages[j].getAttribute('id') == pageId)
       {
+        if ('pushState' in history && alterHistory)
+          history.pushState({"elementIndex": index}, lnk.innerHTML, lnk.getAttribute('href'))
+
         self.scrollToPage(j, self.options.scrollDuration); // Scroll to new active page
         break;
       }
     }
+  };
+
+
+  // History activity
+  this.popstate = function(e) {
+    var self = this;
+
+    self.navClick(e.state.elementIndex, false);
   };
 
 

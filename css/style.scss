@@ -48,9 +48,10 @@ body {
       font-weight: normal;
       font-size: 72px;
       text-transform: lowercase;
+      margin-bottom: 30px;
     }
     h2 {
-      font-weight: 600;
+      font-weight: 500;
       text-transform: uppercase;
       font-size: 18px;
     }
@@ -85,6 +86,8 @@ header {
   right: 0;
   z-index: 3;
   width: 100%;
+  min-height: 80px;
+  height: auto !important;
   height: 80px;
   background: $header_background;
   nav ul {
@@ -194,19 +197,20 @@ header {
 }  
 
 .button {
+  font-family: 'langdonregular';
+  font-size: 24px;
+  font-weight: normal;  
   border: 3px solid #3c373a;
   display: inline-block;
   margin: 0 15px;
-  height: 66px;
-  line-height: 60px;
+  height: 60px;
+  line-height: 54px;
   padding: 0 50px;
   text-transform: uppercase;
   color: #3c373a;
   text-decoration: none;
-  font-weight: 600;
   cursor: pointer;
   background: none;
-  font-size: 1em;
 }
 
 .button:hover {
