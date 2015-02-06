@@ -61,6 +61,9 @@ body {
     background: url(../images/title-bg.png) no-repeat center center;
     min-height: 160px;
     padding: 100px 0; }
+  #home h1 {
+    font-size: 100px;
+    margin-bottom: 0; }
 
 header {
   position: fixed;
