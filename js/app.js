@@ -60,8 +60,11 @@ var chApp = function(options) {
   this.navClick = function(index, alterHistory) {
     var self = this,
         lnk = self.navItems[index].getElementsByTagName('a')[0],
-        pageId = lnk.getAttribute('href').replace(/^\#/, ''),
+        pageId = lnk.getAttribute('href').replace(/^\/\#?/, ''),
         listItem = lnk.parentNode;
+
+    if (pageId === '')
+      pageId = 'home';
 
     for (var j=0; j<self.pages.length; j++)
     {
