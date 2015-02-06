@@ -183,6 +183,43 @@ header {
   -webkit-transition-delay: 0.6s;
   transition-delay: 0.6s; }
 
+
+.project__summary {
+  background: rgba(168, 163, 170, 0.8);
+  color: #3c373a;
+  text-align: center;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  padding-top: 32px;
+}
+
+  .project__image {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .project__summary__title {
+    margin: 0;
+  }
+
+  .project__summary p.project__summary__category {
+    line-height: 1em;
+  }
+
+.project:hover .project__summary {
+  display: block;
+}
+
 #portfolio.visited .project {
   left: 0;
 }
@@ -215,8 +252,8 @@ header {
   border: 3px solid #3c373a;
   display: inline-block;
   margin: 0 15px;
-  height: 60px;
-  line-height: 54px;
+  height: 56px;
+  line-height: 50px;
   padding: 0 50px;
   text-transform: uppercase;
   color: #3c373a;
