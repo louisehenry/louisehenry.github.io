@@ -42,7 +42,7 @@ body {
     display: table;
     width: 60%;
     height: auto;
-    font-size: 16px;
+    font-size: 15px;
     h1 {
       font-family: 'langdonregular';
       font-weight: normal;
@@ -58,7 +58,7 @@ body {
       text-transform: uppercase;
     }
     p {
-      line-height: 30px;
+      line-height: 26px;
       margin-bottom: 1em;
     }
     p.intro {
@@ -151,6 +151,7 @@ header {
   position: relative;
   top: 0;
   left: 2500px;
+  overflow: hidden;
 }
 
 .project:nth-child(1) {
@@ -195,6 +196,7 @@ header {
   bottom: 0;
   position: absolute;
   padding-top: 32px;
+  text-decoration: none;
 }
 
   .project__image {
@@ -271,4 +273,66 @@ header {
   width: 1px;
   height: 1px;
   visibility: hidden;
+}
+
+
+.lightbox {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #edeceb;
+  z-index: 999;
+  h2 {
+    font-weight: normal;
+    font-family: 'langdonregular';
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 25px 0 12px;
+  }
+  p {
+    color: #3c373a;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    a, a:visited {
+      color: #3c373a;
+      text-decoration: underline;
+      font-weight: 600;
+    }    
+  }
+}
+
+  .lightbox__wrapper {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 20%;
+  }
+
+  .lightbox__window {
+    position: relative;
+  }
+
+  .lightbox__close {
+    display: block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    right: -15px;
+    top: -15px;
+    position: absolute;
+  }
+
+  .lightbox__graphic {
+    border: 1px solid #e0dfde;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+.lightbox:target {
+  display: table;
 }
